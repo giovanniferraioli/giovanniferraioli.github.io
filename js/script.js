@@ -1,15 +1,23 @@
-const scheda = document.getElementById('scheda');
-if (scheda) {
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-      const { slug, nome, desc } = card.dataset;
-      document.getElementById('scheda-img').innerHTML = card.querySelector('.ph').outerHTML;
-      document.getElementById('scheda-titolo').textContent = nome;
-      document.getElementById('scheda-desc').textContent = desc;
-      document.getElementById('scheda-link').href = slug + '.html';
-      scheda.showModal();
-    });
+const modulo = document.getElementById('modulo');
+if (modulo) {
+  const esito = document.getElementById('esito');
+  modulo.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (modulo.action.includes('INSERISCI')) {
+      esito.textContent = "Modulo non ancora attivo: manca l'ID di Formspree in chi-sono.html.";
+      return;
+    }
+    const bottone = modulo.querySelector('button[type="submit"]');
+    bottone.disabled = true;
+    esito.textContent = 'Invio in corso…';
+    try {
+      const r = await fetch(modulo.action, { method: 'POST', body: new FormData(modulo), headers: { Accept: 'application/json' } });
+      if (!r.ok) throw new Error();
+      modulo.reset();
+      esito.textContent = 'Messaggio inviato, grazie! Ti risponderò al più presto.';
+    } catch {
+      esito.textContent = "Qualcosa è andato storto. Riprova, oppure scrivimi direttamente via email.";
+    }
+    bottone.disabled = false;
   });
-  scheda.querySelector('.chiudi').addEventListener('click', () => scheda.close());
-  scheda.addEventListener('click', e => { if (e.target === scheda) scheda.close(); });
 }

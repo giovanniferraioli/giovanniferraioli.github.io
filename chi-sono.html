@@ -18,14 +18,28 @@
 <main class="chi">
 <h1>Chi sono</h1>
 <div class="chi-cols"><div class="ph ritratto" style="--tinta:#E3E6EA"><span>Foto</span><img src="immagini/ritratto.jpg" alt="Ritratto" onerror="this.remove()"></div>
-<div><p class="intro">Pensare il concept, progettare la realtà.</p><p>Sono Giovanni Ferraioli, un Industrial Product Designer con una vocazione chiara: progettare prodotti fisici che bilancino un'estetica ricercata con la rigorosa fattibilità tecnica.
+<div><p class="intro">Pensare il concept, progettare la realtà.</p><p>Sono Giovanni Ferraioli, un Industrial Product Designer con una vocazione chiara: progettare prodotti fisici che bilancino un'estetica ricercata con la rigorosa fattibilità tecnica.</p>
+<p>Il mio percorso nel mondo del design è iniziato con una laurea all'ISIA di Firenze e prosegue oggi con la specialistica alla LABA di Brescia. Negli anni ho sviluppato un metodo progettuale analitico e concreto, validato da riconoscimenti internazionali come la Menzione Speciale al concorso Porada Arredi e due primi posti consecutivi al workshop Creactivity di Pontedera.</p>
+<p>Credo fortemente che un buon design non debba limitarsi allo "styling". Deve risolvere problemi reali, migliorare l'ergonomia e ottimizzare i processi produttivi. Per questo, il mio flusso di lavoro affianca sempre i principi dello User-Centered Design (UCD) a quelli del Design for Manufacturing (DFM). Gestisco il progetto in ogni sua fase: dalla ricerca iniziale allo sketching, passando per la modellazione parametrica e di superfici (Rhinoceros, Fusion 360), fino alla prototipazione fisica, lo studio CMF e la stesura delle tavole tecniche e distinte base (BOM).</p>
+<p>Che si tratti di ripensare l'ergonomia di un asciugacapelli professionale, ingegnerizzare un ausilio ortopedico o plasmare un arredo in legno massello, il mio approccio rimane invariato: unire la creatività alla cruda realtà della messa in produzione.</p></div></div>
 
-Il mio percorso nel mondo del design è iniziato con una laurea all'ISIA di Firenze e prosegue oggi con la specialistica alla LABA di Brescia. Negli anni ho sviluppato un metodo progettuale analitico e concreto, validato da riconoscimenti internazionali come la Menzione Speciale al concorso Porada Arredi e due primi posti consecutivi al workshop Creactivity di Pontedera.
+<!-- CV SCARICABILE (opzionale, per ora spento)
+Per attivarlo: 1) nel repository crea una cartella chiamata cv e carica il PDF con nome Giovanni-Ferraioli-CV.pdf
+2) cancella i simboli di commento all'inizio e alla fine di questo blocco, così il pulsante compare.
+<p class="cv"><a class="bottone secondario" href="cv/Giovanni-Ferraioli-CV.pdf" download>Scarica il CV (PDF)</a></p>
+FINE CV -->
 
-Credo fortemente che un buon design non debba limitarsi allo "styling". Deve risolvere problemi reali, migliorare l'ergonomia e ottimizzare i processi produttivi. Per questo, il mio flusso di lavoro affianca sempre i principi dello User-Centered Design (UCD) a quelli del Design for Manufacturing (DFM). Gestisco il progetto in ogni sua fase: dalla ricerca iniziale allo sketching, passando per la modellazione parametrica e di superfici (Rhinoceros, Fusion 360), fino alla prototipazione fisica, lo studio CMF e la stesura delle tavole tecniche e distinte base (BOM).
-
-Che si tratti di ripensare l'ergonomia di un asciugacapelli professionale, ingegnerizzare un ausilio ortopedico o plasmare un arredo in legno massello, il mio approccio rimane invariato: unire la creatività alla cruda realtà della messa in produzione.</p>
-<p><a class="bottone" href="mailto:tuamail@esempio.it">Scrivimi</a></p></div></div>
+<section class="contatti" id="contatti">
+<h2>Contattami</h2>
+<form id="modulo" class="modulo" action="https://formspree.io/f/xyekbnrr" method="POST">
+<div class="campo"><label for="email">La tua email</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+<div class="campo"><label for="oggetto">Oggetto</label><input type="text" id="oggetto" name="_subject" required></div>
+<div class="campo"><label for="messaggio">Messaggio</label><textarea id="messaggio" name="message" rows="7" required></textarea></div>
+<input type="text" name="_gotcha" class="trappola" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="bottone" type="submit">Invia messaggio</button>
+<p id="esito" role="status" aria-live="polite"></p>
+</form>
+</section>
 </main>
 <footer class="foot"><p>© 2026 Giovanni Ferraioli </p><p><a href="mailto:giovanni.ferraioli28@gmail.com">giovanni.ferraioli28@gmail.com</a></p></footer>
 <script src="js/script.js"></script>
