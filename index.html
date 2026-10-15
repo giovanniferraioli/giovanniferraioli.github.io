@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giovanni Ferraioli — Product designer</title>
+<meta name="description" content="Portfolio di product design">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+<header class="top">
+<a class="logo" href="index.html">Giovanni Ferraioli </a>
+<nav><a href="index.html#progetti">Progetti</a><a href="chi-sono.html">Chi sono</a></nav>
+</header>
+<main>
+<section class="hero"><h1>Progetti pensati per essere usati, toccati, portati con sé.</h1>
+<p>Ciao, sono Giovanni Ferraioli, Industrial Product Designer. Unisco approccio User-Centered, modellazione 3D avanzata e sensibilità estetica per trasformare concept complessi in prodotti fisici funzionali, industrializzabili e pronti per la produzione in serie.</p></section>
+<section id="progetti" class="griglia">
+<button class="card" data-slug="selene" data-nome="Selene" data-desc="Un divano dal design organico che bilancia l'estetica del legno massello con la fattibilità tecnica e l'ergonomia, premiato al Porada International Design Award." data-tinta="#E1E4E9">
+<div class="ph " style="--tinta:#E1E4E9"><span>Selene</span><em class="targa">Porada International Design Award 2025</em><img src="immagini/selene/copertina.jpg" alt="Immagine del progetto Selene" onerror="this.remove()"></div><h3>Selene</h3></button>
+<button class="card" data-slug="loomia" data-nome="Loomia" data-desc="Progetto realizzato per il concorso Besenzoni: una scaletta per yacht di lusso che unisce l'eleganza del teak alla resistenza dell'acciaio lucido." data-tinta="#E3E1F1">
+<div class="ph " style="--tinta:#E3E1F1"><span>Loomia</span><img src="immagini/loomia/copertina.jpg" alt="Immagine del progetto Loomia" onerror="this.remove()"></div><h3>Loomia</h3></button>
+<button class="card" data-slug="glider" data-nome="Glider" data-desc="Glider è un rollator innovativo che de-medicalizza l'ausilio ortopedico, integrando sospensioni a balestra e ruote airless per massimizzare la stabilità e il comfort outdoor." data-tinta="#D6E5F0">
+<div class="ph " style="--tinta:#D6E5F0"><span>Glider</span><img src="immagini/glider/copertina.jpg" alt="Immagine del progetto Glider" onerror="this.remove()"></div><h3>Glider</h3></button>
+<button class="card" data-slug="aurora" data-nome="Aurora" data-desc="Un sistema modulare e reversibile di architettura d'emergenza, ispirato alla natura e basato su un innovativo giunto strutturale estruso in alluminio." data-tinta="#DAEADB">
+<div class="ph " style="--tinta:#DAEADB"><span>Aurora</span><img src="immagini/aurora/copertina.jpg" alt="Immagine del progetto Aurora" onerror="this.remove()"></div><h3>Aurora</h3></button>
+<button class="card" data-slug="cupral" data-nome="Cupral" data-desc="Un progetto di reverse engineering e riprogettazione ergonomica di un asciugacapelli professionale, validato tramite test utente e prototipazione fisica." data-tinta="#E9D6C9">
+<div class="ph " style="--tinta:#E9D6C9"><span>Cupral</span><img src="immagini/cupral/copertina.jpg" alt="Immagine del progetto Cupral" onerror="this.remove()"></div><h3>Cupral</h3></button>
+</section>
+</main>
+<dialog id="scheda" aria-labelledby="scheda-titolo">
+<button class="chiudi" aria-label="Chiudi">Chiudi</button>
+<div id="scheda-img"></div>
+<div class="scheda-testo"><h2 id="scheda-titolo"></h2><p id="scheda-desc"></p>
+<a class="bottone" id="scheda-link" href="#">Scopri di più</a></div>
+</dialog>
+<footer class="foot"><p>© 2026 Giovanni Ferraioli </p><p><a href="mailto:giovanni.ferraioli28@gmail.com">giovanni.ferraioli28@gmail.com</a></p></footer>
+<script src="js/script.js"></script>
+</body>
+</html>

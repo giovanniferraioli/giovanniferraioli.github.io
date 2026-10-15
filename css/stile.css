@@ -1,0 +1,63 @@
+:root{--sfondo:#F5F6F7;--carta:#fff;--inchiostro:#1C1F24;--tenue:#5F6670;--linea:#D9DCE0;--accento:#2F4B7C;--raggio:14px;--max:1160px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--sfondo);color:var(--inchiostro);font:400 1.0625rem/1.65 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accento);outline-offset:3px}
+.top{max-width:var(--max);margin:0 auto;padding:1.5rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:700;font-size:1.25rem;text-decoration:none}
+.top nav{display:flex;gap:1.75rem}
+.top nav a{text-decoration:none;color:var(--tenue)}
+.top nav a:hover{color:var(--inchiostro);text-decoration:underline;text-underline-offset:6px}
+main{max-width:var(--max);margin:0 auto;padding:0 1.5rem 4rem}
+.hero{padding:4rem 0 3.5rem;max-width:52rem}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:700}
+.hero p{margin-top:1.5rem;color:var(--tenue);max-width:34rem}
+.ph{position:relative;background:var(--tinta);border-radius:var(--raggio);overflow:hidden;aspect-ratio:4/3;display:grid;place-items:center}
+.ph span{font:700 clamp(1.5rem,4vw,2.5rem)/1 "Bricolage Grotesque",sans-serif;color:rgba(28,31,36,.28);letter-spacing:-.02em}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.griglia{display:grid;grid-template-columns:repeat(6,1fr);gap:2.5rem 1.5rem}
+.card{grid-column:span 2;background:none;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.card:nth-child(1),.card:nth-child(2){grid-column:span 3}
+.card:nth-child(1) .ph,.card:nth-child(2) .ph{aspect-ratio:3/2}
+.card h3{font-size:1.35rem;margin-top:.9rem;font-weight:500}
+.card .ph{transition:transform .25s ease}
+.card:hover .ph{transform:translateY(-4px)}
+dialog{border:0;border-radius:20px;padding:0;width:min(46rem,calc(100% - 2rem));background:var(--carta);color:inherit;box-shadow:0 30px 80px rgba(20,25,35,.28)}
+dialog::backdrop{background:rgba(28,31,36,.5)}
+dialog[open]{animation:apri .22s ease}
+@keyframes apri{from{opacity:0;transform:translateY(14px) scale(.98)}}
+#scheda-img .ph{border-radius:0;aspect-ratio:16/9}
+.scheda-testo{padding:1.75rem 2rem 2rem}
+.scheda-testo h2{font-size:2rem}
+.scheda-testo p{margin:.75rem 0 1.5rem;color:var(--tenue)}
+.chiudi{position:absolute;top:1rem;right:1rem;z-index:2;border:0;background:rgba(255,255,255,.92);border-radius:99px;padding:.4rem 1rem;font:inherit;font-size:.9rem;cursor:pointer}
+.bottone{display:inline-block;background:var(--inchiostro);color:#fff;text-decoration:none;padding:.75rem 1.5rem;border-radius:99px;font-weight:500}
+.bottone:hover{background:var(--accento)}
+.progetto{max-width:56rem}
+.indietro{display:inline-block;margin:1rem 0 2rem;color:var(--tenue);text-decoration:none}
+.indietro:hover{color:var(--inchiostro)}
+.progetto h1,.chi h1{font-size:clamp(2.6rem,7vw,5rem)}
+.intro{font-size:1.3rem;line-height:1.5;margin:1.25rem 0 2.5rem;max-width:40rem}
+.ph.grande{aspect-ratio:16/10}
+.dati{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1.25rem;padding:1.75rem 0;margin:2.5rem 0;border-block:1px solid var(--linea)}
+.dati dt{color:var(--tenue);font-size:.9rem}
+.dati dd{font-weight:500}
+.blocco{margin:3rem 0;display:grid;grid-template-columns:12rem 1fr;gap:1rem 2rem}
+.blocco h2{font-size:1.4rem}
+.coppia{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.prossimo{display:block;margin-top:5rem;padding:2rem;border-radius:var(--raggio);background:var(--carta);text-decoration:none;border:1px solid var(--linea)}
+.prossimo span{display:block;color:var(--tenue);font-size:.95rem}
+.prossimo strong{font:700 2.2rem "Bricolage Grotesque",sans-serif}
+.prossimo:hover{border-color:var(--inchiostro)}
+.chi{padding-top:2rem}
+.chi-cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3rem;margin-top:2.5rem;align-items:start}
+.ritratto{aspect-ratio:4/5}
+.chi .intro{margin-top:0}
+.foot{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 3rem;border-top:1px solid var(--linea);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;color:var(--tenue);font-size:.95rem}
+@media(max-width:760px){.griglia{grid-template-columns:1fr}.card,.card:nth-child(1),.card:nth-child(2){grid-column:auto}.blocco,.chi-cols,.coppia{grid-template-columns:1fr}.hero{padding-top:2rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.targa{position:absolute;top:.9rem;left:.9rem;z-index:2;background:#fff;color:var(--inchiostro);font:500 .85rem/1 "Instrument Sans",sans-serif;font-style:normal;padding:.5rem .85rem;border-radius:99px;box-shadow:0 2px 10px rgba(20,25,35,.15)}
+.targa.inline{position:static;display:inline-block;margin-top:1.25rem;background:var(--inchiostro);color:#fff;box-shadow:none}
+.ph.larga{aspect-ratio:16/9;margin-top:1.5rem}
