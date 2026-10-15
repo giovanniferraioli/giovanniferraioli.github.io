@@ -83,7 +83,6 @@ button.bottone{border:0;font:inherit;font-weight:500;cursor:pointer}
 button.bottone:disabled{opacity:.6;cursor:wait}
 #esito{margin-top:1rem;color:var(--tenue)}
 @media(max-width:760px){.altri-griglia{grid-template-columns:1fr 1fr}}
-
-/* ---- fix smartphone ---- */
-.piu{white-space:nowrap}
-@media(max-width:760px){.griglia{grid-template-columns:1fr}.card,.card:nth-child(1),.card:nth-child(2){grid-column:auto}}
+   /* ---- fix smartphone ---- */
+   .piu{white-space:nowrap}
+   @media(max-width:760px){.griglia{grid-template-columns:1fr}.card,.card:nth-child(1),.card:nth-child(2){grid-column:auto}}
